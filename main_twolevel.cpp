@@ -363,7 +363,7 @@ int main(int argc, char **argv)
             epsilon = sqrt(epsilon*world/3.14);
 
 
-            twoLevel::disk::load(S, epsilon);
+            S.loadDisk(epsilon);
 
             pR = new Relation[runNumPartitions];
             Coord partitionExtent = 1.0/runNumPartitionsPerRelation;
