@@ -321,6 +321,20 @@ namespace twoLevel{
             auto yEnd = myRemainder2(s.yEnd, partitionExtent, int(myQuotient(s.yEnd + EPS, partitionExtent)));
             
 
+            if (s.xStart + EPS <= 0) {
+                xStartCell = 0;
+            }
+            else {
+                xStartCell = myQuotient(s.xStart + EPS, partitionExtent);
+            }
+            
+            if (s.yStart + EPS <= 0) {
+                yStartCell = 0;
+            }
+            else {
+                yStartCell = myQuotient(s.yStart + EPS, partitionExtent);
+            }
+     
             if (s.xEnd + EPS >= 1) {
                 xEndCell = runNumPartitionsPerRelation - 1;
             }
