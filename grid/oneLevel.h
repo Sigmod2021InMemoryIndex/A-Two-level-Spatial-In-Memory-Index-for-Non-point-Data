@@ -28,6 +28,14 @@ namespace oneLevel{
 
         xInt = (x + EPS)/cellExtent;
         yInt = (y + EPS)/cellExtent;
+        
+        if (numCellsPerDimension == xInt){
+            xInt = numCellsPerDimension -1;
+        }
+
+        if (numCellsPerDimension == yInt){
+            yInt = numCellsPerDimension -1;
+        }
 
         return (yInt * numCellsPerDimension + xInt);
     };
