@@ -14,6 +14,8 @@ Source code for the 'A Two-level Spatial In-Memory Index for Non-point Data' pap
 A sample of the datasets used can be found [here](https://1drv.ms/u/s!AkJtflSedw1rdW0uoOSJt_zOF9k?e=PrZE70). 
 Files that include ```_mbr``` contain only the MBRs of the objects, while files that include ```_geom``` contain the full geometry of the objects and should be used when running refinement experiments. Files that include ```_90%``` and ```_10%``` should be used when running update experiments. Finally, there are three query sets. ```TIGER_c0.1%_n10000.qry``` should be used with TIGER dataset. Equally, ```uni_c0.1%_n10000.qry```  and ```zipf_c0.1%_n10000.qry``` should be used with uniform and zipfian datasets respectively.
 
+**Important:** When using Quad-Tree with zipfian dataset you must limit the height of the tree using ```-h```.
+
 
 ### Compile
 Compile using ```make all``` or ```make <option>``` where <option> can be one of the following:
