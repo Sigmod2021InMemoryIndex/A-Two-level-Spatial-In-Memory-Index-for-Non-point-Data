@@ -250,30 +250,10 @@ void Relation::loadDisk(Coord epsilon)
         x = (this->at(i).xStart +this->at(i).xEnd)/2;
         y = (this->at(i).yStart + this->at(i).yEnd)/2;
         
-        if (x - epsilon > 0.0){
-            this->at(i).xStart = x - epsilon;
-        }
-        else{
-            this->at(i).xStart = 0.0;
-        }      
-        if (x + epsilon > 1.0){
-            this->at(i).xEnd = 1.0;
-        }
-        else{
-            this->at(i).xEnd = x + epsilon;
-        }      
-        if (y - epsilon > 0.0){
-            this->at(i).yStart = y - epsilon;
-        }
-        else{
-            this->at(i).yStart = 0;
-        }
-        if (y + epsilon > 1.0){
-            this->at(i).yEnd = 1.0;
-        }
-        else{
-            this->at(i).yEnd = y + epsilon;
-        }
+        this->at(i).xStart = x - epsilon;
+        this->at(i).xEnd = x + epsilon;
+        this->at(i).yStart = y - epsilon;
+        this->at(i).yEnd = y + epsilon;
     }
 }
 
